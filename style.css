@@ -1,0 +1,171 @@
+/* تنظیمات پایه */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #87ceeb, #f5f5f5);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  .scene {
+    position: relative;
+    width: 400px;
+    height: 500px;
+  }
+  
+  /* گلدان */
+  .pot {
+    position: absolute;
+    bottom: 0;
+    left: 150px;
+    width: 100px;
+    height: 80px;
+    background: #8b4513;
+    border-radius: 0 0 50px 50px;
+    border: 3px solid #5a3823;
+  }
+  
+  /* شاخه گل */
+  .stem {
+    position: absolute;
+    bottom: 80px;
+    left: 195px;
+    width: 10px;
+    height: 150px;
+    background: green;
+    border-radius: 5px;
+    transform-origin: bottom;
+    animation: grow 3s ease-in-out forwards;
+  }
+  
+  .leaf {
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    background: green;
+    border-radius: 10px;
+  }
+  
+  .leaf-left {
+    top: 40px;
+    left: -15px;
+    transform: rotate(-30deg);
+  }
+  
+  .leaf-right {
+    top: 80px;
+    right: -15px;
+    transform: rotate(30deg);
+  }
+  
+  /* گل */
+  .flower {
+    position: absolute;
+    bottom: 230px;
+    left: 175px;
+    width: 50px;
+    height: 50px;
+    transform: scale(0);
+    animation: bloom 3s ease-in-out forwards 2.5s;
+  }
+  
+  .petal {
+    position: absolute;
+    width: 20px;
+    height: 30px;
+    background: #ff69b4;
+    border-radius: 50%;
+  }
+  
+  .petal1 { top: 0; left: 50%; transform: translateX(-50%); }
+  .petal2 { bottom: 0; left: 50%; transform: translateX(-50%); }
+  .petal3 { left: 0; top: 50%; transform: translateY(-50%); }
+  .petal4 { right: 0; top: 50%; transform: translateY(-50%); }
+  
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 15px;
+    height: 15px;
+    background: yellow;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* دختر */
+  .girl {
+    position: absolute;
+    bottom: 0;
+    right: -200px;
+    width: 100px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: moveGirl 4s ease-in-out forwards 3s;
+  }
+  
+  .head {
+    width: 65px;
+    height: 60px;
+    background: #ffe0bd;
+    border-radius: 50%;
+    position: relative;
+  }
+  
+  .hair {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65px;
+    height: 25px;
+    background: #6a4f4b;
+    border-radius: 18% 50% 0 0;
+  }
+  
+  .body {
+    width: 40px;
+    height: 100px;
+    background: #ff69b4;
+    border-radius: 10px;
+  }
+  
+  .arm {
+    position: absolute;
+    bottom: 195px;
+    left: -20px;
+    width: 60px;
+    height: 15px;
+    background: #ffe0bd;
+    border-radius: 10px;
+    transform-origin: right;
+    transform: rotate(0deg);
+    animation: waveArm 1s ease-in-out infinite 5s;
+  }
+  
+  /* انیمیشن‌ها */
+  @keyframes grow {
+    0% { height: 0; }
+    100% { height: 150px; }
+  }
+  
+  @keyframes bloom {
+    0% { transform: scale(0); }
+    100% { transform: scale(1); }
+  }
+  
+  @keyframes moveGirl {
+    0% { right: -200px; }
+    100% { right: 50px; }
+  }
+  
+  @keyframes waveArm {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(-20deg); }
+  }
+  
